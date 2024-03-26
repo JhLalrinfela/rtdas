@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <title>Realtime Data</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1 class="text-center mt-0 mb-0"><%= title %></h1>
+      <div class="row">
+        <div class="col-md-2">
+          <script src="javascripts/sidebar.js"></script>
+        </div>
+        <div class="col-md-10" id="display">
+          <p>This is for Chart</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascripts/argajax.js"></script>
+  </body>
+</html>

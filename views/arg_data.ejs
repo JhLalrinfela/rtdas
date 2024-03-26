@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <title>Realtime Data</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1 class="text-center mt-0 mb-0"><%= title %></h1>
+
+      <div class="row">
+        <div class="d-flex justify-content-center d-none" id="spinner">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="list-group">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              id="aibawk"
+              >Aibawk</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              id="buhchangphai"
+              >Buhchangphai</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              id="bunghmun"
+              >Bunghmun</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Chhingchhip</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Darlawn</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Haulawng</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Hnahlan</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Kawrtethawveng</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Khawhai</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Lungpuk</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Lungsen</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Mualvum</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >North Hlimen</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >North Vanlaiphai</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Phuldungsei</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Phullen</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Saitual</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Sialsuk</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Tawipui South</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Teikhawng</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Thingsai</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Tuipuibari</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Vaphai</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Vaseitlang</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Vathuampui</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Vawmbuk</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Zawngling</a
+            >
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="card" id="data_table">
+            <div class="card-header">
+              <div class="row">
+                <div class="col">
+                  <%= station %>
+                  <span class="float-end"
+                    >Select Date Range : From&nbsp-&nbsp<input
+                      type="date"
+                      id="first"
+                    />
+                    To&nbsp-&nbsp<input type="date" id="last" />&nbsp&nbsp
+                    <select id="stations">
+                      <option selected>Select Stations</option>
+                      <option value="aibawk">Aibawk</option>
+                      <option value="buhchangphai">Buhchangphai</option>
+                      <option value="bunghmun">Bunghmun</option></select
+                    >&nbsp&nbsp
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="daterangesearch"
+                    >
+                      Search
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body"></div>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>DATE & TIME</th>
+                    <th>RAI(Daily)</th>
+                    <th>RAIN(Hourly)</th>
+                    <th>SOURCE</th>
+                  </tr>
+                </thead>
+                <tbody id="display"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascripts/argajax.js"></script>
+  </body>
+</html>

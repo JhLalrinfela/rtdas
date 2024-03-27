@@ -1,7 +1,7 @@
 var database = require("../database");
 
 exports.data_query = function (req, res, station) {
-  var query = `Select * from ${station} order by DateAndTime Desc`;
+  var query = `Select * from ${station} order by DateAndTime Desc Limit 25 `;
   database.query(query, function (error, data) {
     let r_data = data;
     function rename() {
@@ -13,7 +13,6 @@ exports.data_query = function (req, res, station) {
         // Delete old key
         delete obj["Rain Daily"];
         delete obj["Rain Hourly"];
-
         return obj;
       });
     }
@@ -22,7 +21,7 @@ exports.data_query = function (req, res, station) {
     if (error) {
       throw error;
     } else {
-      res.render("table", {
+      res.render("arg_data", {
         title: "AUTOMATIC RAIN GAUGE",
         station: station,
         action: "list",
@@ -54,9 +53,9 @@ exports.date_query = function (req, res, station, from, to) {
     if (error) {
       throw error;
     } else {
-      res.render("table", {
-        title: "RTDAS DATA",
-        station: "Aibawk-Date_Range",
+      res.render("arg_data", {
+        title: "AUTOMATIC RAIN GAUGE",
+        station: station,
         action: "list",
         sampleData: l_data,
       });

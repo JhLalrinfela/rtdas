@@ -1,37 +1,25 @@
 var express = require("express");
 var router = express.Router();
-
-var database = require("../database");
 var argquery = require("./argquery");
 
 router.get("/", function (req, res, next) {
-  res.render("arg_data", {
-    title: "RTDAS DATA",
+  res.render("arg", {
+    title: "Automatic Rain Gauge",
   });
 });
 
-//Aibawk Start
-router.get("/aibawk_data", function (req, res, next) {
-  var station = "aibawk";
+//ARG Start
+router.post("/arg_data", function (req, res, next) {
+  var station = req.body.station;
   argquery.data_query(req, res, station);
 });
 
 router.post("/get_date", function (req, res, next) {
-  var first_date = req.body.first_date;
-  var last_date = req.body.last_date;
+  var from = req.body.first_date;
+  var to = req.body.last_date;
   var station = req.body.station;
-  console.log(station);
-  argquery.date_query(req, res, station, first_date, last_date);
+  argquery.date_query(req, res, station, from, to);
 });
-//Aibawk End
-
-//Buhchang Start
-router.get("/buhchang_data", function (req, res, next) {
-  var station = "buhchangphai";
-  argquery.data_query(req, res, station);
-});
-
-
-//Buhchang End
+//ARG End
 
 module.exports = router;

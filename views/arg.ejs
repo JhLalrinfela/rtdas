@@ -9,17 +9,54 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
 
-    <title>Realtime Data</title>
+    <title>Real Time Data Acquisition System</title>
   </head>
   <body>
     <div class="container-fluid">
-      <h1 class="text-center mt-0 mb-0"><%= title %></h1>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <div class="container">
+          <a class="navbar-brand" href="arg"><%= title %></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="arg"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Back To Main</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <div class="row">
         <div class="col-md-2">
-          <script src="javascripts/sidebar.js"></script>
+          <script src="javascripts/sidebar_arg.js"></script>
         </div>
-        <div class="col-md-10" id="display">
-          <p>This is for Chart</p>
+        <div class="col-md-10" id="arg_data">
+          <div class="card" style="width: 400px">
+            <img src="/images/7.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Total ARG Stations</h5>
+              <h1 class="card-text">27</h1>
+              <p class="card-text">
+                <small class="text-muted">Last updated March 2024</small>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

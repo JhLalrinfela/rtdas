@@ -1,42 +1,52 @@
-$(document).ready(function () {
-  $(".btn").click(function () {
+$(function () {
+  $(".btn").on("click", function () {
     var station_name = String(this.value);
     switch (station_name) {
       case "Aibawk":
         var station = "aibawk";
         Station_Data(station);
+        console.log(station);
         break;
       case "Buhchangphai":
         var station = "buhchangphai";
+
         Station_Data(station);
+        console.log(station);
         break;
       case "Bunghmun":
         var station = "bunghmun";
         Station_Data(station);
+        console.log(station);
         break;
       case "Chhingchhip":
         var station = "chhingchhip";
         Station_Data(station);
+        console.log(station);
         break;
       case "Haulawng":
         var station = "haulawng";
         Station_Data(station);
+        console.log(station);
         break;
       case "Hnahlan":
         var station = "hnahlan";
         Station_Data(station);
+        console.log(station);
         break;
       case "Kawrtethawveng":
         var station = "kawtethawveng";
         Station_Data(station);
+        console.log(station);
         break;
       case "Khawhai":
         var station = "khawhai";
         Station_Data(station);
+        console.log(station);
         break;
       case "Lungpuk":
         var station = "lungpuk";
         Station_Data(station);
+        console.log(station);
         break;
       case "Lungsen":
         var station = "lungsen";

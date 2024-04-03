@@ -1,7 +1,7 @@
 var database = require("../database");
 
 exports.data_query = function (req, res, station) {
-  var query = `Select * from ${station} order by DateAndTime Desc Limit 25 `;
+  var query = `Select * from ${station} order by DateAndTime Desc Limit 50 `;
   database.query(query, function (error, data) {
     let r_data = data;
     function rename() {

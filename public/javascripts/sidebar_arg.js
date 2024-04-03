@@ -1,6 +1,6 @@
 document.write('<div class="list-group">');
 document.write(
-  '<input type="button" class="btn btn-primary btn-sm mb-1" value="Aibawk" />'
+  '<input type="button" class="btn btn-primary btn-sm mb-1" value="Aibawk"/>'
 );
 document.write(
   '<input type="button" class="btn btn-primary btn-sm mb-1" value="Buhchangphai"/>'
